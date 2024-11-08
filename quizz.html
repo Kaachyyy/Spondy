@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Spondylarthrite Ankylosante</title>
+    <link href="../styles/styleQuizz.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="quiz-container">
+    <h1>Connaissez-vous la Spondylarthrite ?</h1>
+    <div id="question-container" class="question-container">
+        <p id="question"></p>
+        <div class="btn-group">
+            <button class="btn btn-true" onclick="selectAnswer(true)">Vrai</button>
+            <button class="btn btn-false" onclick="selectAnswer(false)">Faux</button>
+        </div>
+        <p id="feedback"></p>
+    </div>
+    <button id="next-btn" class="btn btn-next" onclick="nextQuestion()">Question suivante</button>
+    <p id="score" class="score"></p>
+</div>
+
+<script src="../scripts/quizz.js"></script>
+
+</body>
+</html>
