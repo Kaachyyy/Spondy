@@ -74,11 +74,11 @@
             <button type="submit">Se connecter</button>
             <div class="error-message" id="login-error"></div>
             <div class="toggle-form">
-                <a onclick="toggleForm('signup-form')">Pas encore de compte ? Inscrivez-vous</a>
+                <a href="javascript:void(0)" onclick="toggleForm('signup-form')">Pas encore de compte ? Inscrivez-vous</a>
             </div>
         </form>
 
-        <form id="signup-form" onsubmit="return handleSignup(event)">
+        <form id="signup-form">
             <h2>Créer un compte</h2>
             <div class="input-group">
                 <label for="signup-name">Nom complet</label>
