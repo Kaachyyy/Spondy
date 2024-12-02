@@ -1,0 +1,194 @@
+
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href=./images/fav.png>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFS - Accueil</title>
+    <link rel="stylesheet" href="./styles/style_connexion.css">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <a><img src="./images/logo.png" alt="Logo de l'AFS"></a>
+    </div>
+    <nav>
+
+        <!-- MENU-->
+        <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+        <ul id="nav-links" class="hidden">
+            <li><a href="./index.html">L'AFS</a>
+            </li>
+            <li><a  href="#actualite">Actualité</a>
+            </li>
+            <li><a href="./laSpondy.html">La maladie</a>
+                <ul class="submenu hidden">
+                    <li><a href="./laSpondy.html">Qu’est ce que la spondyloarthrtite</a></li>
+                    <li><a href="./404error.html">Recherche et Progrès</a></li>
+                    <li><a href="./404error.html">Informations médicale</a></li>
+                    <li><a href="./404error.html">Articles spécialisée médicaux</a></li>
+                    <li><a href="./404error.html">L’AFs et la recherche</a></li>
+                    <li><a href="./404error.html">Essai clinique </a></li>
+                    <li><a href="./404error.html">Espace soignant </a></li>
+
+                </ul>
+            </li>
+
+
+            <li><a href="/temoignage">Qui sommes nous</a>
+
+                <ul class="submenu hidden">
+                    <li><a href="./quiSomme.html">Qu’est ce que l’AFS</a></li>
+                    <li><a href="./404error.html">Conseil d'administration et dirigeants de l'AFS</a></li>
+                    <li><a href="./404error.html">L’AFs et la recherche</a></li>
+
+                </ul></li>
+
+            <li><a href="./404error.html">Nous rejoindre</a>
+                <ul class="submenu hidden">
+                    <li><a href="./404error.html">Spondyfollowers</a></li>
+                    <li><a href="./don.html">Faire un don</a></li>
+                    <li><a href="./404error.html">Nous contacter</a></li>
+                    <li><a href="./404error.html">Délegation de l’afs</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+</header>
+<main>
+
+    <div class="container">
+        <form id="login-form" class="active" onsubmit="return handleLogin(event)">
+            <h2>Bienvenue</h2>
+            <div class="input-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required placeholder="Entrez votre email">
+            </div>
+            <div class="input-group">
+                <label for="login-password">Mot de passe</label>
+                <input type="password" id="login-password" required placeholder="Entrez votre mot de passe">
+            </div>
+            <button type="submit">Se connecter</button>
+            <div class="error-message" id="login-error"></div>
+            <div class="toggle-form">
+                <a href="javascript:void(0)" onclick="toggleForm('signup-form')">Pas encore de compte ? Inscrivez-vous</a>
+            </div>
+        </form>
+
+        <form id="signup-form" onsubmit="return handleSignup(event)">
+            <h2>Créer un compte</h2>
+            <div class="input-group">
+                <label for="signup-name">Nom complet</label>
+                <input type="text" id="signup-name" required placeholder="Entrez votre nom complet">
+            </div>
+            <div class="input-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required placeholder="Entrez votre email">
+            </div>
+            <div class="input-group">
+                <label for="signup-password">Mot de passe</label>
+                <input type="password" id="signup-password" required placeholder="Choisissez un mot de passe">
+            </div>
+            <button type="submit">S'inscrire</button>
+            <div class="error-message" id="signup-error"></div>
+            <div class="toggle-form">
+                <a href="javascript:void(0)" onclick="toggleForm('login-form')">Déjà un compte ? Connectez-vous</a>
+            </div>
+        </form>
+
+        <form id="questionnaire" onsubmit="return handleQuestionnaire(event)">
+            <h2>Questionnaire rapide</h2>
+            <div class="question">
+                <label>Quelle est votre tranche d'âge ?</label>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="age" value="18-24" required> 18-24 ans
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="25-34"> 25-34 ans
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="35-44"> 35-44 ans
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="45+"> 45 ans et plus
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Quels sont vos centres d'intérêt ? (Sélectionnez tout ce qui s'applique)</label>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="interests" value="technology"> Technologie
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="sports"> Sport
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="art"> Art
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="music"> Musique
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Soumettre</button>
+            <div class="success-message" id="questionnaire-success"></div>
+        </form>
+    </div>
+
+
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <a href="https://www.google.com/maps/search/?api=1&query=Appartement+15%2C+Résidence+27+Rue+Aimé%2C+Angoulins%2C+17690+TULLE" target="_blank" rel="noopener noreferrer">
+                <p>Appartement 15</p>
+                <p>Résidence 27 Rue Aimé</p>
+                <p>Angoulins</p>
+                <p>17690 TULLE</p>
+            </a>
+            <p>Écoute/info : 05 55 21 41 49</p>
+            <p>Secrétariat : 06 87 65 42 29</p>
+
+        </div>
+        <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="./404error.html">Boutique en ligne</a></li>
+                <li><a href="./404error.html">Contacter l'AFS</a></li>
+                <li><a href="./laSpondy.html">Qu'est-ce que la spodylarthrite?</a></li>
+                <li><a href="./don.html">Soutien et adhésion à l'AFS</a></li>
+            </ul>
+
+
+
+        </div>
+        <div class="footer-section">
+            <h3>À propos</h3>
+            <a href="./404error.html">Mentions légales</a>
+            <br>
+            <a href="./404error.html">Conditions générales de Vente</a>
+            <br>
+            <a href="./404error.html">Politique de confidentialité</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/afs-pr%C3%A9sidente-1580a2223/" target="_blank" ><img src="./images/linkedin.png"></a>
+                <a href="https://fr-fr.facebook.com/SpondyAssociationFrance/" target="_blank"><img src="./images/facebook.png"></a>
+                <a href="./404error.html" target="_blank" ><img src="./images/x.png"></a>
+                <a href="https://www.youtube.com/channel/UCzhvr3CBBL3nuxuo9uKi67A" target="_blank"> <img src="./images/ytb.png"></a>
+                <a href="https://www.instagram.com/presidence_afs/" target="_blank" ><img src="./images/insta.png"></a>
+                <p>© Kachy N'guessan 210</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="scripts/connexion.js"></script>
+</body>
+</html>
